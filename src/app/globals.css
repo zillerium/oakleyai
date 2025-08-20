@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 69, 84, 176;
+  --background-end-rgb: 27, 33, 69;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+.hidden-text {
+  visibility: hidden; /* This assumes your background is white */
+}
+
+/* Prevent breaking inside elements */
+.page-break-avoid {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+/* Allow manual page breaks if needed */
+.page-break {
+  page-break-before: always;
+  break-before: page;
+}
+
+/* styles/globals.css */
+
+
+
+@layer utilities {
+  @media (max-width: 600px) {
+    .grid {
+      width: 100%;
+      flex-direction: column;
+    }
+  }
+  ,
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@layer base {img {display: initial; } }
